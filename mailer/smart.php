@@ -18,21 +18,14 @@ $mail->Password = '';                           // Наш пароль от ящ
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
  
-$mail->setFrom('', 'Pulse');   // От кого письмо 
-$mail->addAddress('');     // Add a recipient
-//$mail->addAddress('ellen@example.com');               // Name is optional
-//$mail->addReplyTo('info@example.com', 'Information');
-//$mail->addCC('cc@example.com');
-//$mail->addBCC('bcc@example.com');
-//$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-//$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-$mail->isHTML(true);                                  // Set email format to HTML
+$mail->setFrom('worclouddd@gmail.com', 'Pulse');   // От кого письмо 
+$mail->addAddress('lisavic864@robhung.com');     // Add a recipient
 
 $mail->Subject = 'Данные';
 $mail->Body    = '
-		Пользователь оставил данные <br> 
-	Имя: ' . $name . ' <br>
-	Номер телефона: ' . $phone . '<br>
+		Пользователь оставил данные 
+	Имя: ' . $name . ' 
+	Номер телефона: ' . $phone . '
 	E-mail: ' . $email . '';
 
 if(!$mail->send()) {
